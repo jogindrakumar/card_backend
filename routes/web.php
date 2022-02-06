@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
+use App\Http\Controllers\Backend\AboutController;
 use App\Models\Admin;
 
 /*
@@ -35,14 +36,30 @@ Route::group(['prefix' => 'admin', 'middleware'=>['admin:admin']],function(){
 
 });
 
- //Admin All routes
 
+
+ //Admin All routes
+ Route::middleware(['auth:admin'])->group(function () {
+    
  Route::get('/admin/logout',[AdminController::class,'destroy'])->name('admin.logout');
  Route::get('/admin/profile',[AdminProfileController::class,'AdminProfile'])->name('admin.profile');
  Route::get('/admin/profile/edit',[AdminProfileController::class,'AdminProfileEdit'])->name('admin.profile.edit');
  Route::post('/admin/profile/store',[AdminProfileController::class,'AdminProfileStore'])->name('admin.profile.store');
  Route::get('/admin/change/password',[AdminProfileController::class,'AdminChangePassword'])->name('admin.change.password');
  Route::post('/admin/update/password',[AdminProfileController::class,'AdminUpdatePassword'])->name('update.change.password');
+
+ });
+
+Route::prefix('about')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[AboutController::class,'AboutView'])->name('all.about');
+Route::get('/add',[AboutController::class,'AboutAdd'])->name('add.about');
+Route::post('/store',[AboutController::class,'AboutStore'])->name('about.store');
+Route::get('/edit/{id}',[AboutController::class,'AboutEdit'])->name('about.edit');
+Route::post('/update',[AboutController::class,'AboutUpdate'])->name('about.update');
+Route::get('/delete/{id}',[AboutController::class,'AboutDelete'])->name('about.delete');
+
+
+ });
 
  
 Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', function () {
