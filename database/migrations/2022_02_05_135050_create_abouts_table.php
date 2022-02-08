@@ -23,8 +23,6 @@ class CreateAboutsTable extends Migration
             $table->string('mobile');
             $table->text('desp');
             $table->string('job');
-            $table->string('skill_name');
-            $table->string('skill_per');
             $table->string('img');
             $table->string('cv');
             $table->timestamps();

@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Models\Admin;
+use App\Models\About;
 
 /*
 |--------------------------------------------------------------------------

@@ -17,8 +17,6 @@ class About extends Model
         'mobile',
         'desp',
         'job',
-        'skill_name',
-        'skill_per',
         'img',
         'cv',
     ];

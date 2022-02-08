@@ -22,28 +22,42 @@ class AboutController extends Controller
 
     public function AboutStore(Request $request){
         $request->validate([
-            'about_name_en' => 'required',
-            'about_name_hin' => 'required',
-            'about_image' => 'required',
+            
+        'name'            => 'required',
+        'email'           => 'required',
+        'address'         => 'required',
+        'position_first'  => 'required',
+        'position_second' => 'required',
+        'mobile'          => 'required',
+        'desp'            => 'required',
+        'job'             => 'required',
+        'cv'              => 'required',
+        'img'             => 'required',
         ]);
 
-        $image = $request->file('about_image');
+        $image = $request->file('img');
         $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-        Image::make($image)->resize(300,300)->save('upload/about/'.$name_gen);
+        Image::make($image)->resize(360,360)->save('upload/about/'.$name_gen);
         $save_url = 'upload/about/'.$name_gen;
 
         About::insert([
-            'about_name_en' => $request->about_name_en,
-            'about_name_hin' => $request->about_name_hin,
-            'about_slug_en' => strtolower(str_replace(' ','-',$request->about_name_en)),
-            'about_slug_hin' => strtolower(str_replace(' ','-',$request->about_name_hin)),
-            'about_image' => $save_url,
+
+        'name'              => $request->name,
+        'email'             => $request->email,
+        'address'           => $request->address,
+        'position_first'    => $request->position_first,
+        'position_second'   => $request->position_second,
+        'mobile'            => $request->mobile,
+        'desp'              => $request->desp,
+        'job'               => $request->job,
+        'cv'                => $request->cv,
+        'img'               => $save_url,
         ]);
          $notification = array(
             'message' => 'about Inserted Successfully',
             'alert-type' => 'success'
                 );
-        return redirect()->back()->with($notification);
+        return redirect()->route('all.about')->with($notification);
     }
 
     public function AboutEdit($id){

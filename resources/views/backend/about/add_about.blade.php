@@ -12,7 +12,7 @@
 				</div>
         <div class="box-body">
             <div class="table-responsive">
-	<form action="" method="POST" enctype="multipart/form-data">
+	<form action="{{route('about.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
       
     
@@ -21,6 +21,15 @@
         <div class="controls">
         <input type="text" name="name" class="form-control"  value=""  > 
 		@error('name')
+		<span class="text-danger">{{$message}}</span>
+		@enderror
+		</div>
+    </div>
+	 <div class="form-group">
+        <h5>Address<span class="text-danger">*</span></h5>
+        <div class="controls">
+        <input type="text" name="address" class="form-control"  value=""  > 
+		@error('address')
 		<span class="text-danger">{{$message}}</span>
 		@enderror
 		</div>
@@ -52,6 +61,15 @@
 		@enderror
 	 </div>
     </div>
+	<div class="form-group">
+        <h5>Mobile<span class="text-danger">*</span></h5>
+        <div class="controls">
+        <input type="text" name="mobile" class="form-control"  value=""  >
+		@error('mobile')
+		<span class="text-danger">{{$message}}</span>
+		@enderror
+	 </div>
+    </div>
     <div class="form-group">
         <h5>Description<span class="text-danger">*</span></h5>
         <div class="controls">
@@ -66,25 +84,6 @@
         <div class="controls">
         <input type="text" name="job"  class="form-control"  value=""  > 
 	@error('job')
-		<span class="text-danger">{{$message}}</span>
-		@enderror
-	</div>
-    </div>
-	<div class="form-group">
-        <h5>skill_name<span class="text-danger">*</span></h5>
-        <div class="controls">
-        <input type="text" name="skill_name"  class="form-control"  value=""  > 
-	@error('skill_name')
-		<span class="text-danger">{{$message}}</span>
-		@enderror
-	</div>
-    </div>
-   
-	<div class="form-group">
-        <h5>skill_per<span class="text-danger">*</span></h5>
-        <div class="controls">
-        <input type="text" name="skill_per"  class="form-control"  value=""  > 
-	@error('skill_per')
 		<span class="text-danger">{{$message}}</span>
 		@enderror
 	</div>
