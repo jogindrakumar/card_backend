@@ -23,9 +23,13 @@
 					  <table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th>Brand En</th>
-								<th>Brand Hin</th>
 								<th>Image</th>
+								<th>Name</th>
+								<th>Address</th>
+								<th>First Position</th>
+								<th>Second Position</th>
+								<th>E-mail</th>
+								
 								<th>Action</th>
 								
 							</tr>
@@ -35,14 +39,23 @@
                                 
                           
 <tr>
-	<td></td>
-	<td></td>
-	<td><img src="" alt="" style="width:70px; height:40px;"></td>
+	@foreach ($abouts as $about )
+		
+	
+	<td><img src="{{asset($about->img)}}" alt="" style="width:70px; height:40px;"></td>
+	<td>{{$about->name}}</td>
+	<td>{{$about->address}}</td>
+	<td>{{$about->position_first}}</td>
+	<td>{{$about->position_second}}</td>
+	<td>{{$about->email}}</td>
+	
+	
+	
 <td>
-<a href="" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-<a href="" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
+<a href="{{route('about.edit',$about->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
+<a href="{{route('about.delete',$about->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
 </td>
-            
+      @endforeach      
         </tr>
          
 							

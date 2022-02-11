@@ -68,25 +68,21 @@ class AboutController extends Controller
 
     }
 
-    public function AboutUpdate(Request $request){
+    public function AboutUpdate(Request $request,$id){
 
-        $about_id = $request->id;
-        $old_image = $request->old_image;
+        
+        $old_image = $request->old_img;
 
-        if($request->file('about_image')){
+        if($request->file('img')){
 
             unlink($old_image);
-                $image = $request->file('about_image');
+                $image = $request->file('img');
                 $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
                 Image::make($image)->resize(300,300)->save('upload/about/'.$name_gen);
                 $save_url = 'upload/about/'.$name_gen;
 
-                About::FindOrFail($about_id)->update([
-                    'about_name_en' => $request->about_name_en,
-                    'about_name_hin' => $request->about_name_hin,
-                    'about_slug_en' => strtolower(str_replace(' ','-',$request->about_name_en)),
-                    'about_slug_hin' => strtolower(str_replace(' ','-',$request->about_name_hin)),
-                    'about_image' => $save_url,
+                About::FindOrFail($id)->update([
+                    'img'               => $save_url,
                 ]);
                 $notification = array(
                     'message' => 'about Updated Successfully',
@@ -96,11 +92,16 @@ class AboutController extends Controller
 
 
         }else{
-                About::FindOrFail($about_id)->update([
-                        'about_name_en' => $request->about_name_en,
-                        'about_name_hin' => $request->about_name_hin,
-                        'about_slug_en' => strtolower(str_replace(' ','-',$request->about_name_en)),
-                        'about_slug_hin' => strtolower(str_replace(' ','-',$request->about_name_hin)),
+                About::FindOrFail($id)->update([
+                            'name'              => $request->name,
+                            'email'             => $request->email,
+                            'address'           => $request->address,
+                            'position_first'    => $request->position_first,
+                            'position_second'   => $request->position_second,
+                            'mobile'            => $request->mobile,
+                            'desp'              => $request->desp,
+                            'job'               => $request->job,
+                            'cv'                => $request->cv,
                         
                     ]);
                     $notification = array(
