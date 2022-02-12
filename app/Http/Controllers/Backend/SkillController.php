@@ -22,16 +22,16 @@ class SkillController extends Controller
     public function SkillStore(Request $request){
         $request->validate([
             
-        'name'            => 'required',
-        'email'           => 'required',
+        'skill_name'            => 'required',
+        'skill_per'           => 'required',
         
         ]);
 
 
         Skill::insert([
 
-        'name'              => $request->name,
-        'email'             => $request->email,
+        'skill_name'    => $request->skill_name,
+        'skill_per'     => $request->skill_per,
        
         ]);
          $notification = array(

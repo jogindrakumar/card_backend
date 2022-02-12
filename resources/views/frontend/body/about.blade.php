@@ -57,27 +57,15 @@
    			<p></p>
 
 				<ul class="skill-bars">
+					@foreach ($skills as $skill )
+						
+					
 				   <li>
-				   	<div class="progress percent90"><span>90%</span></div>
-				   	<strong>HTML5</strong>
+				   	<div class="progress percent90"><span>{{$skill->skill_per}}%</span></div>
+				   	<strong>{{$skill->skill_name}}</strong>
 				   </li>
-				   <li>
-				   	<div class="progress percent85"><span>85%</span></div>
-				   	<strong>CSS3</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent70"><span>70%</span></div>
-				   	<strong>JQuery</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent95"><span>95%</span></div>
-				   	<strong>PHP</strong>
-				   </li>
-				   <li>
-
-				   	<div class="progress percent75"><span>75%</span></div>
-				   	<strong>Wordpress</strong>
-				   </li>
+				@endforeach
+				   
       
 				</ul> <!-- /skill-bars -->		
 

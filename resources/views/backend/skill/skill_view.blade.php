@@ -26,7 +26,6 @@
 								
 								<th>Skill Name</th>
 								<th>Percentage</th>
-								<th>Description</th>
 								<th>Action</th>
 								
 							</tr>
@@ -34,14 +33,11 @@
 						<tbody>
                            
                                 
-                          
+ @foreach ($skills as $skill)                         
 <tr>
-	@foreach ($skills as $skill )
+	
 	<td>{{$skill->skill_name}}</td>
-	<td>{{$skill->skill_per}}</td>
-	<td>{{$skill->skill_desp}}</td>
-	
-	
+	<td>{{$skill->skill_per}}</td>	
 <td>
 <a href="{{route('skill.edit',$skill->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
 <a href="{{route('skill.delete',$skill->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>

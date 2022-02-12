@@ -19,7 +19,7 @@
         <div class="form-group">
         <h5>Skill Name<span class="text-danger">*</span></h5>
         <div class="controls">
-        <input type="text" name="name" class="form-control"  value=""  > 
+        <input type="text" name="skill_name" class="form-control"  value=""  > 
 		@error('skill_name')
 		<span class="text-danger">{{$message}}</span>
 		@enderror
@@ -28,21 +28,13 @@
 	 <div class="form-group">
         <h5>Skill Percentage<span class="text-danger">*</span></h5>
         <div class="controls">
-        <input type="text" name="address" class="form-control"  value=""  > 
+        <input type="text" name="skill_per" class="form-control"  value=""  > 
 		@error('skill_per')
 		<span class="text-danger">{{$message}}</span>
 		@enderror
 		</div>
     </div>
-	 <div class="form-group">
-        <h5>Description<span class="text-danger">*</span></h5>
-        <div class="controls">
-        <input type="text" name="position_first" class="form-control"  value=""  > 
-		@error('desp')
-		<span class="text-danger">{{$message}}</span>
-		@enderror
-		</div>
-    </div>
+	 
 	
    
 

@@ -22,7 +22,8 @@ use App\Models\Skill;
 
 Route::get('/', function () {
     $abouts = About::all();
-    return view('home',compact('abouts'));
+    $skills = Skill::all();
+    return view('home',compact('abouts','skills'));
 });
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
