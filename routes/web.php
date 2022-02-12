@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Backend\SkillController;
 use App\Models\Admin;
 use App\Models\About;
+use App\Models\Skill;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +21,8 @@ use App\Models\About;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $abouts = About::all();
+    return view('home',compact('abouts'));
 });
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
@@ -56,8 +59,19 @@ Route::get('/view',[AboutController::class,'AboutView'])->name('all.about');
 Route::get('/add',[AboutController::class,'AboutAdd'])->name('add.about');
 Route::post('/store',[AboutController::class,'AboutStore'])->name('about.store');
 Route::get('/edit/{id}',[AboutController::class,'AboutEdit'])->name('about.edit');
-Route::post('/update',[AboutController::class,'AboutUpdate'])->name('about.update');
+Route::post('/update/{id}',[AboutController::class,'AboutUpdate'])->name('about.update');
 Route::get('/delete/{id}',[AboutController::class,'AboutDelete'])->name('about.delete');
+
+
+ });
+
+Route::prefix('skill')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[SkillController::class,'SkillView'])->name('all.skill');
+Route::get('/add',[SkillController::class,'SkillAdd'])->name('add.skill');
+Route::post('/store',[SkillController::class,'SkillStore'])->name('skill.store');
+Route::get('/edit/{id}',[SkillController::class,'SkillEdit'])->name('skill.edit');
+Route::post('/update/{id}',[SkillController::class,'SkillUpdate'])->name('skill.update');
+Route::get('/delete/{id}',[SkillController::class,'SkillDelete'])->name('skill.delete');
 
 
  });

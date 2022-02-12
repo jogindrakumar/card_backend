@@ -10,13 +10,16 @@
    			<div class="col-twelve">
 
 	   			<h5>Hello, World.</h5>
-	   			<h1>I'm Juan Dela Cruz.</h1>
+				   @foreach ($abouts as $about )
+	   			<h1>I'm {{$about->name}}.</h1>
+
+	
 
 	   			<p class="intro-position">
-	   				<span>Front-end Developer</span>
-	   				<span>UI/UX Designer</span> 
+	   				<span>{{$about->position_first}}</span>
+	   				<span>{{$about->position_second}}</span> 
 	   			</p>
-
+		@endforeach
 	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
 
 	   		</div>  

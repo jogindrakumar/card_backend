@@ -113,7 +113,7 @@
              
    
     <div class="text-xs-right">
-        <input type="submit" class="btn btn-rounded btn-primary mb-5" value="Add New">
+        <input type="submit" class="btn btn-rounded btn-primary mb-5" value="update">
        
     </div>
 </form>
