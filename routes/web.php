@@ -6,10 +6,12 @@ use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\SkillController;
 use App\Http\Controllers\Backend\WorkController;
+use App\Http\Controllers\Backend\EducationController;
 use App\Models\Admin;
 use App\Models\About;
 use App\Models\Skill;
 use App\Models\Work;
+use App\Models\Education;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,6 +88,18 @@ Route::post('/store',[WorkController::class,'WorkStore'])->name('work.store');
 Route::get('/edit/{id}',[WorkController::class,'WorkEdit'])->name('work.edit');
 Route::post('/update/{id}',[WorkController::class,'WorkUpdate'])->name('work.update');
 Route::get('/delete/{id}',[WorkController::class,'WorkDelete'])->name('work.delete');
+
+ });
+
+ 
+
+ Route::prefix('education')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[EducationController::class,'EduView'])->name('all.edu');
+Route::get('/add',[EducationController::class,'EduAdd'])->name('add.edu');
+Route::post('/store',[EducationController::class,'EduStore'])->name('edu.store');
+Route::get('/edit/{id}',[EducationController::class,'EduEdit'])->name('edu.edit');
+Route::post('/update/{id}',[EducationController::class,'EduUpdate'])->name('edu.update');
+Route::get('/delete/{id}',[EducationController::class,'EduDelete'])->name('edu.delete');
 
 
  });
