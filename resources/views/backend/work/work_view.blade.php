@@ -16,7 +16,13 @@
 			 <div class="box">
 				<div class="box-header with-border">
 				  <h3 class="box-title">Work</h3>
+                  <br>
+                  <br>
+                   <a href="{{route('add.work')}}" class="btn btn-success" title="Add Work"><i class="fa fa-plus"></i></a>
 				</div>
+                <div>
+                   
+                </div>
 				<!-- /.box-header -->
 				<div class="box-body">
 					<div class="table-responsive">
