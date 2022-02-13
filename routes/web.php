@@ -5,9 +5,11 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\SkillController;
+use App\Http\Controllers\Backend\WorkController;
 use App\Models\Admin;
 use App\Models\About;
 use App\Models\Skill;
+use App\Models\Work;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,6 +78,18 @@ Route::get('/delete/{id}',[SkillController::class,'SkillDelete'])->name('skill.d
 
 
  });
+
+Route::prefix('work')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[WorkController::class,'WorkView'])->name('all.work');
+Route::get('/add',[WorkController::class,'WorkAdd'])->name('add.work');
+Route::post('/store',[WorkController::class,'WorkStore'])->name('work.store');
+Route::get('/edit/{id}',[WorkController::class,'WorkEdit'])->name('work.edit');
+Route::post('/update/{id}',[WorkController::class,'WorkUpdate'])->name('work.update');
+Route::get('/delete/{id}',[WorkController::class,'WorkDelete'])->name('work.delete');
+
+
+ });
+
 
  
 Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', function () {
