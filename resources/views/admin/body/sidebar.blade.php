@@ -95,7 +95,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href=""><i class="ti-more"></i>View</a></li>
+            <li><a href="{{route('all.portfolio')}}"><i class="ti-more"></i>View</a></li>
+            <li><a href="{{route('add.portfolio')}}"><i class="ti-more"></i>Add</a></li>
            
           </ul>
         </li> 

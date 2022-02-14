@@ -7,11 +7,13 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\SkillController;
 use App\Http\Controllers\Backend\WorkController;
 use App\Http\Controllers\Backend\EducationController;
+use App\Http\Controllers\Backend\PortfolioController ;
 use App\Models\Admin;
 use App\Models\About;
 use App\Models\Skill;
 use App\Models\Work;
 use App\Models\Education;
+use App\Models\Portfolio;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +29,8 @@ use App\Models\Education;
 Route::get('/', function () {
     $abouts = About::all();
     $skills = Skill::all();
-    return view('home',compact('abouts','skills'));
+    $portfolios = Portfolio::all();
+    return view('home',compact('abouts','skills','portfolios'));
 });
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
@@ -100,6 +103,16 @@ Route::post('/store',[EducationController::class,'EduStore'])->name('edu.store')
 Route::get('/edit/{id}',[EducationController::class,'EduEdit'])->name('edu.edit');
 Route::post('/update/{id}',[EducationController::class,'EduUpdate'])->name('edu.update');
 Route::get('/delete/{id}',[EducationController::class,'EduDelete'])->name('edu.delete');
+
+
+ });
+  Route::prefix('portfolio')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[PortfolioController ::class,'PortfolioView'])->name('all.portfolio');
+Route::get('/add',[PortfolioController ::class,'PortfolioAdd'])->name('add.portfolio');
+Route::post('/store',[PortfolioController ::class,'PortfolioStore'])->name('portfolio.store');
+Route::get('/edit/{id}',[PortfolioController ::class,'PortfolioEdit'])->name('portfolio.edit');
+Route::post('/update/{id}',[PortfolioController ::class,'PortfolioUpdate'])->name('portfolio.update');
+Route::get('/delete/{id}',[PortfolioController ::class,'PortfolioDelete'])->name('portfolio.delete');
 
 
  });
