@@ -8,7 +8,7 @@
 
 			 <div class="box">
 				<div class="box-header with-border">
-				  <h3 class="box-title">Add About</h3>
+				  <h3 class="box-title">Edit About</h3>
 				</div>
         <div class="box-body">
             <div class="table-responsive">
