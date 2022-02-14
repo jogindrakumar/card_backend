@@ -52,54 +52,22 @@ class SkillController extends Controller
     public function SkillUpdate(Request $request,$id){
 
         
-        $old_image = $request->old_img;
+        Skill::findOrFail($id)->update([
 
-        if($request->file('img')){
-
-            unlink($old_image);
-                $image = $request->file('img');
-                $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-                Image::make($image)->resize(300,300)->save('upload/skill/'.$name_gen);
-                $save_url = 'upload/skill/'.$name_gen;
-
-                Skill::FindOrFail($id)->update([
-                    'img'               => $save_url,
-                ]);
-                $notification = array(
-                    'message' => 'skill Updated Successfully',
-                    'alert-type' => 'success'
-                        );
-                return redirect()->route('all.skill')->with($notification);
-
-
-        }else{
-                Skill::FindOrFail($id)->update([
-                            'name'              => $request->name,
-                            'email'             => $request->email,
-                            'address'           => $request->address,
-                            'position_first'    => $request->position_first,
-                            'position_second'   => $request->position_second,
-                            'mobile'            => $request->mobile,
-                            'desp'              => $request->desp,
-                            'job'               => $request->job,
-                            'cv'                => $request->cv,
-                        
-                    ]);
-                    $notification = array(
-                        'message' => 'Skill Updated Successfully',
-                        'alert-type' => 'success'
-                            );
-                    return redirect()->route('all.skill')->with($notification);
-
-        }
+        'skill_name'    => $request->skill_name,
+        'skill_per'     => $request->skill_per,
+       
+        ]);
+         $notification = array(
+            'message' => 'Skill Updated Successfully',
+            'alert-type' => 'success'
+                );
+        return redirect()->route('all.skill')->with($notification);
 
     }
 
     public function SkillDelete($id){
-        $skill = Skill::FindOrFail($id);
-        $img = $skill->skill_image;
-        unlink($img);
-
+       
        Skill::FindOrFail($id)->delete();
 
          $notification = array(
