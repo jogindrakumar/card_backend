@@ -102,6 +102,20 @@
         </li> 
          <li class="treeview">
           <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Service</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('all.service')}}"><i class="ti-more"></i>View</a></li>
+            <li><a href="{{route('add.service')}}"><i class="ti-more"></i>Add</a></li>
+           
+          </ul>
+        </li> 
+         <li class="treeview">
+          <a href="#">
             
             <i data-feather="sliders"></i>
             <span>Slider</span>
