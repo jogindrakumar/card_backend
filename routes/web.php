@@ -7,11 +7,13 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\SkillController;
 use App\Http\Controllers\Backend\WorkController;
 use App\Http\Controllers\Backend\EducationController;
-use App\Http\Controllers\Backend\PortfolioController ;
+use App\Http\Controllers\Backend\PortfolioController;
+use App\Http\Controllers\Backend\ServiceController;
 use App\Models\Admin;
 use App\Models\About;
 use App\Models\Skill;
 use App\Models\Work;
+use App\Models\Service;
 use App\Models\Education;
 use App\Models\Portfolio;
 
@@ -106,7 +108,7 @@ Route::get('/delete/{id}',[EducationController::class,'EduDelete'])->name('edu.d
 
 
  });
-  Route::prefix('portfolio')->middleware(['auth:admin'])->group(function(){
+Route::prefix('portfolio')->middleware(['auth:admin'])->group(function(){
 Route::get('/view',[PortfolioController ::class,'PortfolioView'])->name('all.portfolio');
 Route::get('/add',[PortfolioController ::class,'PortfolioAdd'])->name('add.portfolio');
 Route::post('/store',[PortfolioController ::class,'PortfolioStore'])->name('portfolio.store');
@@ -114,6 +116,15 @@ Route::get('/edit/{id}',[PortfolioController ::class,'PortfolioEdit'])->name('po
 Route::post('/update/{id}',[PortfolioController ::class,'PortfolioUpdate'])->name('portfolio.update');
 Route::get('/delete/{id}',[PortfolioController ::class,'PortfolioDelete'])->name('portfolio.delete');
 
+ });
+
+Route::prefix('service')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[ServiceController ::class,'ServiceView'])->name('all.service');
+Route::get('/add',[ServiceController ::class,'ServiceAdd'])->name('add.service');
+Route::post('/store',[ServiceController ::class,'ServiceStore'])->name('service.store');
+Route::get('/edit/{id}',[ServiceController ::class,'ServiceEdit'])->name('service.edit');
+Route::post('/update/{id}',[ServiceController ::class,'ServiceUpdate'])->name('service.update');
+Route::get('/delete/{id}',[ServiceController ::class,'ServiceDelete'])->name('service.delete');
 
  });
 
