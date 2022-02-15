@@ -56,11 +56,18 @@ class PortfolioController extends Controller
 
     public function PortfolioUpdate(Request $request,$id){
 
+         $old_image = $request->old_image;
+                unlink($old_image);
+                $image = $request->file('project_img');
+                $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+                Image::make($image)->resize(800,801)->save('upload/portfolio/'.$name_gen);
+                $save_url = 'upload/portfolio/'.$name_gen;
+
         Portfolio::FindOrFail($id)->update([
 
         'project_name'              => $request->project_name,
         'project_tech'              => $request->project_tech,
-        'project_img'              => $request->project_img,
+        'project_img'              =>   $save_url,
         'project_link'              => $request->project_link,   
        
         ]);
