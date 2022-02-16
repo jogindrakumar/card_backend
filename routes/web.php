@@ -9,8 +9,10 @@ use App\Http\Controllers\Backend\WorkController;
 use App\Http\Controllers\Backend\EducationController;
 use App\Http\Controllers\Backend\PortfolioController;
 use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\TargetController;
 use App\Models\Admin;
 use App\Models\About;
+use App\Models\Target;
 use App\Models\Skill;
 use App\Models\Work;
 use App\Models\Service;
@@ -125,6 +127,15 @@ Route::post('/store',[ServiceController ::class,'ServiceStore'])->name('service.
 Route::get('/edit/{id}',[ServiceController ::class,'ServiceEdit'])->name('service.edit');
 Route::post('/update/{id}',[ServiceController ::class,'ServiceUpdate'])->name('service.update');
 Route::get('/delete/{id}',[ServiceController ::class,'ServiceDelete'])->name('service.delete');
+
+ });
+ Route::prefix('target')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[TargetController ::class,'TargetView'])->name('all.target');
+Route::get('/add',[TargetController ::class,'TargetAdd'])->name('add.target');
+Route::post('/store',[TargetController ::class,'TargetStore'])->name('target.store');
+Route::get('/edit/{id}',[TargetController ::class,'TargetEdit'])->name('target.edit');
+Route::post('/update/{id}',[TargetController ::class,'TargetUpdate'])->name('target.update');
+Route::get('/delete/{id}',[TargetController ::class,'TargetDelete'])->name('target.delete');
 
  });
 
