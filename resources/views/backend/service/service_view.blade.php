@@ -15,7 +15,7 @@
 
 			 <div class="box">
 				<div class="box-header with-border">
-				  <h3 class="box-title">Education</h3>
+				  <h3 class="box-title">Service</h3>
                   <br>
                   <br>
                    <a href="{{route('add.service')}}" class="btn btn-success" title="Add Edu"><i class="fa fa-plus"></i></a>
