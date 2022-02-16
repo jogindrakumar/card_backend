@@ -44,7 +44,7 @@
 <tr>
 	
 	<td>{{$service->service_name}}</td>
-	<td>{{$service->desp}}</td>	
+	<td>{{$service->service_desp}}</td>	
 	<td>{{$service->service_icon}}</td>	
 <td>
 <a href="{{route('service.edit',$service->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>

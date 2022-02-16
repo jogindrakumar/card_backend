@@ -20,15 +20,15 @@ class ServiceController extends Controller
     public function ServiceStore(Request $request){
         $request->validate([
             
-        'degree_name'       => 'required',
-        'from'              => 'required',
-        'desp'              => 'required',
+        'service_name'              => 'required',
+        'service_desp'              => 'required',
+        'service_icon'              => 'required',
         
         ]);
         Service::insert([
-        'degree_name'       => $request->degree_name,
-        'from'              => $request->from,
-        'desp'              => $request->desp,
+        'service_name'              => $request->service_name,
+        'service_desp'              => $request->service_desp,
+        'service_icon'              => $request->service_icon,
         ]);
          $notification = array(
             'message' => 'Service Inserted Successfully',
@@ -49,9 +49,9 @@ class ServiceController extends Controller
 
         Service::FindOrFail($id)->update([
 
-        'degree_name'       => $request->degree_name,
-        'from'              => $request->from,
-        'desp'              => $request->desp,
+        'service_name'              => $request->service_name,
+        'service_desp'              => $request->service_desp,
+        'service_icon'              => $request->service_icon,
        
         ]);
          $notification = array(
