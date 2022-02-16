@@ -22,15 +22,15 @@ class TargetController extends Controller
     public function TargetStore(Request $request){
         $request->validate([
             
-        'degree_name'       => 'required',
-        'from'              => 'required',
-        'desp'              => 'required',
+        'icon'               => 'required',
+        'count'              => 'required',
+        'title'              => 'required',
         
         ]);
         Target::insert([
-        'degree_name'       => $request->degree_name,
-        'from'              => $request->from,
-        'desp'              => $request->desp,
+        'icon'                 => $request->icon,
+        'count'              => $request->count,
+        'title'              => $request->title,
         ]);
          $notification = array(
             'message' => 'Target Inserted Successfully',
@@ -51,9 +51,9 @@ class TargetController extends Controller
 
         Target::FindOrFail($id)->update([
 
-        'degree_name'       => $request->degree_name,
-        'from'              => $request->from,
-        'desp'              => $request->desp,
+        'icon'                 => $request->icon,
+        'count'              => $request->count,
+        'title'              => $request->title,
        
         ]);
          $notification = array(
