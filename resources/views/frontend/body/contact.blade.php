@@ -1,5 +1,16 @@
 	<section id="contact">
-
+       @if (Session::has('success'))
+<div class="alert alert-success" role="alert">
+  {{Session::get('success')}}
+</div>
+  
+@endif
+ @if (Session::has('error'))
+<div class="alert alert-danger" role="alert">
+  {{Session::get('error')}}
+</div>
+  
+@endif
 		<div class="row section-intro">
    		<div class="col-twelve">
 
@@ -16,23 +27,24 @@
    		<div class="col-twelve">
 
             <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="">
+            <form   method="post" action="{{route('message.store')}}">
+			@csrf
       			<fieldset>
 
                   <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+ 						   <input name="name" type="text"  placeholder="Name" value="" minlength="2" required="">
                   </div>
                   <div class="form-field">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+	      			   <input name="email" type="email"  placeholder="Email" value="" required="">
 	               </div>
                   <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+	     				   <input name="subject" type="text"  placeholder="Subject" value="">
 	               </div>                       
                   <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+	                 	<textarea name="msg"  placeholder="message" rows="10" cols="50" required=""></textarea>
 	               </div>                      
                  <div class="form-field">
-                     <button class="submitform">Submit</button>
+                     <button class="submitform" type="submit">Submit</button>
                      <div id="submit-loader">
                         <div class="text-loader">Sending...</div>                             
        				      <div class="s-loader">

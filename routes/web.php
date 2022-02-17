@@ -131,13 +131,27 @@ Route::post('/update/{id}',[ServiceController ::class,'ServiceUpdate'])->name('s
 Route::get('/delete/{id}',[ServiceController ::class,'ServiceDelete'])->name('service.delete');
 
  });
- Route::prefix('target')->middleware(['auth:admin'])->group(function(){
+
+
+Route::prefix('target')->middleware(['auth:admin'])->group(function(){
 Route::get('/view',[TargetController ::class,'TargetView'])->name('all.target');
 Route::get('/add',[TargetController ::class,'TargetAdd'])->name('add.target');
 Route::post('/store',[TargetController ::class,'TargetStore'])->name('target.store');
 Route::get('/edit/{id}',[TargetController ::class,'TargetEdit'])->name('target.edit');
 Route::post('/update/{id}',[TargetController ::class,'TargetUpdate'])->name('target.update');
 Route::get('/delete/{id}',[TargetController ::class,'TargetDelete'])->name('target.delete');
+
+ });
+
+ 
+
+Route::prefix('message')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[ContactController ::class,'MessageView'])->name('all.message');
+// Route::get('/add',[ContactController ::class,'MessageAdd'])->name('add.message');
+Route::post('/store',[ContactController ::class,'MessageStore'])->name('message.store');
+Route::get('/edit/{id}',[ContactController ::class,'MessageEdit'])->name('message.edit');
+Route::post('/update/{id}',[ContactController ::class,'MessageUpdate'])->name('message.update');
+Route::get('/delete/{id}',[ContactController ::class,'MessageDelete'])->name('message.delete');
 
  });
 

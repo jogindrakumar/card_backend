@@ -128,89 +128,25 @@
            
           </ul>
         </li> 
-         <li class="treeview">
-          <a href="#">
-            
-            <i data-feather="sliders"></i>
-            <span>Slider</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href=""><i class="ti-more"></i>View Slider</a></li>
-            
-          </ul>
-        </li> 
-         <li class="treeview">
-          <a href="#">
-            
-            <i data-feather="bell"></i>
-            <span>services</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href=""><i class="ti-more"></i>View </a></li>
-            
-          </ul>
-        </li> 
 
-         <li class="treeview">
-          <a href="#">
-            <i data-feather="briefcase"></i>
-            <span>Contact</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href=""><i class="ti-more"></i>View </a></li>
-            
-          </ul>
-        </li> 
-
-        <li class="treeview">
-          <a href="#">
-            <i data-feather="activity"></i>
-            <span>Clients</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href=""><i class="ti-more"></i>View Clients</a></li>
-            
-          </ul>
-        </li> 
           <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>
-            <span>Messages</span>
+            <span>Message</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href=""><i class="ti-more"></i>View Messages</a></li>
-            
+            <li><a href="{{route('all.message')}}"><i class="ti-more"></i>View</a></li>
+            {{-- <li><a href="{{route('add.target')}}"><i class="ti-more"></i>Add</a></li> --}}
+           
           </ul>
         </li> 
+        
+         
 		  
-        <li class="treeview">
-          <a href="#">
-            <i data-feather="mail"></i> <span>Mailbox</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="mailbox_inbox.html"><i class="ti-more"></i>Inbox</a></li>
-            <li><a href="mailbox_compose.html"><i class="ti-more"></i>Compose</a></li>
-            <li><a href="mailbox_read_mail.html"><i class="ti-more"></i>Read</a></li>
-          </ul>
-        </li>
+      
 		
         <li class="treeview">
           <a href="#">
