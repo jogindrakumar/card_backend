@@ -39,7 +39,8 @@ Route::get('/', function () {
     $portfolios = Portfolio::latest()->get();
     $educations = Education::latest()->get();
     $services = Service::latest()->get();
-    return view('home',compact('abouts','skills','portfolios','works','educations','services'));
+    $targets = Target::latest()->get();
+    return view('home',compact('abouts','skills','portfolios','works','educations','services','targets'));
 });
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {

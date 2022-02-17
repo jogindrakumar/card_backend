@@ -5,101 +5,25 @@
 
 				<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
 
+					@foreach ($targets as $target)
+						
+					
 					<div class="bgrid stat">
 
 						<div class="icon-part">
-							<i class="icon-pencil-ruler"></i>
+							<i class="{{$target->icon}}"></i>
 						</div>
 
 						<h3 class="stat-count">
-							1500
+							{{$target->count}}
 						</h3>
 
 						<h5 class="stat-title">
-							Projects Completed
+							{{$target->title}}
 						</h5>
 
 					</div> <!-- /stat -->					
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-users"></i>
-						</div>
-
-						<h3 class="stat-count">
-							900
-						</h3>
-
-						<h5 class="stat-title">
-							Happy Clients
-						</h5>
-
-					</div> <!-- /stat -->
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-badge"></i>
-						</div>
-
-						<h3 class="stat-count">
-							200
-						</h3>
-
-						<h5 class="stat-title">
-							Awards Received
-						</h5>
-
-					</div> <!-- /stat -->									
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-light-bulb"></i>
-						</div>
-
-						<h3 class="stat-count">
-							120
-						</h3>
-
-						<h5 class="stat-title">
-							Crazy Ideas
-						</h5>
-
-					</div> <!-- /stat -->
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-cup"></i>
-						</div>
-
-						<h3 class="stat-count">
-							1500
-						</h3>
-
-						<h5 class="stat-title">
-							Coffee Cups
-						</h5>
-
-					</div> <!-- /stat -->
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-clock"></i>
-						</div>
-
-						<h3 class="stat-count">
-							7200
-						</h3>
-
-						<h5 class="stat-title">
-							Hours
-						</h5>
-
-					</div> <!-- /stat -->
+@endforeach
 
 				</div> <!-- /stats-list -->
 

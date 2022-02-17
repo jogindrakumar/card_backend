@@ -79,27 +79,30 @@
    			</div>
 
    			<h5>Where to find me</h5>
-
+@foreach ($abouts as $about )
    			<p>
-            1600 Amphitheatre Parkway<br>
-            Mountain View, CA<br>
-            94043 US
+            {{$about->address}}
             </p>
-
+@endforeach
    		</div>
 
    		<div class="col-four tab-full collapse">
+
+			{{-- @php
+				 $abouts =  App\Models\About::latest()->get();
+			@endphp --}}
 
    			<div class="icon">
    				<i class="icon-mail"></i>
    			</div>
 
    			<h5>Email Me At</h5>
+@foreach ($abouts as $about )
+	
 
-   			<p>someone@kardswebsite.com<br>
-			   	info@kardswebsite.com			     
+   			<p>{{$about->email}}			     
 			   </p>
-
+@endforeach
    		</div>
 
    		<div class="col-four tab-full">
@@ -109,12 +112,10 @@
    			</div>
 
    			<h5>Call Me At</h5>
-
-   			<p>Phone: (+63) 555 1212<br>
-			   	Mobile: (+63) 555 0100<br>
-			     	Fax: (+63) 555 0101
+@foreach ($abouts as $about )
+   			<p>{{$about->mobile}}
 			   </p>
-
+@endforeach
    		</div>
    		
    	</div> <!-- /contact-info -->
