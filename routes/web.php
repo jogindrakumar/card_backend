@@ -33,10 +33,12 @@ use App\Models\Portfolio;
 */
 
 Route::get('/', function () {
-    $abouts = About::all();
-    $skills = Skill::all();
-    $portfolios = Portfolio::all();
-    return view('home',compact('abouts','skills','portfolios'));
+    $abouts = About::latest()->get();
+    $skills = Skill::latest()->get();
+    $works = Work::latest()->get();
+    $portfolios = Portfolio::latest()->get();
+    $educations = Education::latest()->get();
+    return view('home',compact('abouts','skills','portfolios','works','educations'));
 });
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
