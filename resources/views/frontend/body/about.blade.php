@@ -30,10 +30,10 @@
    					<strong>Fullname:</strong>
    					<span>{{$about->name}}</span>
    				</li>
-   				<li>
+   				{{-- <li>
    					<strong>Birth Date:</strong>
    					<span>September 28, 1987</span>
-   				</li>
+   				</li> --}}
    				<li>
    					<strong>Job:</strong>
    					<span>{{$about->job}}</span>
