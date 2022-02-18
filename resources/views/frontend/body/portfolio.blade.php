@@ -47,7 +47,7 @@
 	            <div id="modal-{{$portfolio->id}}" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
-				     		<img src="{{asset($portfolio->project_img)}}" alt="" />
+				     		<img src="{{asset($portfolio->model_img)}}" alt="" />
 				     	</div>      	
 
 					   <div class="description-box">

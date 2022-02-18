@@ -30,6 +30,7 @@
 						<thead>
 							<tr>
 								<th>Image</th>
+								<th>Model img</th>
 								<th>Project Name</th>
 								<th>Tech</th>
 								<th>Link</th>
@@ -43,6 +44,7 @@
  @foreach ($portfolios as $portfolio)                         
 <tr>
 	<td><img src="{{asset($portfolio->project_img)}}" alt="" style="width: 70px; height:70px"></td>	
+	<td><img src="{{asset($portfolio->model_img)}}" alt="" style="width: 70px; height:70px"></td>	
 	<td>{{$portfolio->project_name}}</td>
 	<td>{{$portfolio->project_tech}}</td>	
 	<td>{{$portfolio->project_link}}</td>	

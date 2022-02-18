@@ -32,11 +32,18 @@ class PortfolioController extends Controller
         $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
         Image::make($image)->resize(800,801)->save('upload/portfolio/'.$name_gen);
         $save_url = 'upload/portfolio/'.$name_gen;
+
+        $model_image = $request->file('model_img');
+        $name_gen = hexdec(uniqid()).'.'.$model_image->getClientOriginalExtension();
+        Image::make($model_image)->resize(1050,700)->save('upload/portfolio/model/'.$name_gen);
+        $save_model_url = 'upload/portfolio/model/'.$name_gen;
+
         Portfolio::insert([
 
         'project_name'              => $request->project_name,
         'project_tech'              => $request->project_tech,
         'project_img'              =>  $save_url,
+        'model_img'              =>  $save_model_url,
         'project_link'              => $request->project_link,   
         ]);
          $notification = array(
@@ -57,17 +64,27 @@ class PortfolioController extends Controller
     public function PortfolioUpdate(Request $request,$id){
 
          $old_image = $request->old_image;
+         $old_model_image = $request->old_model_image;
+
                 unlink($old_image);
+                
                 $image = $request->file('project_img');
                 $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
                 Image::make($image)->resize(800,801)->save('upload/portfolio/'.$name_gen);
                 $save_url = 'upload/portfolio/'.$name_gen;
+
+                unlink($old_model_image);
+                $model_image = $request->file('model_img');
+                $name_gen = hexdec(uniqid()).'.'.$model_image->getClientOriginalExtension();
+                Image::make($model_image)->resize(1050,700)->save('upload/portfolio/model/'.$name_gen);
+                $save_model_url = 'upload/portfolio/model/'.$name_gen;
 
         Portfolio::FindOrFail($id)->update([
 
         'project_name'              => $request->project_name,
         'project_tech'              => $request->project_tech,
         'project_img'              =>   $save_url,
+        'model_img'              =>  $save_model_url,
         'project_link'              => $request->project_link,   
        
         ]);
@@ -80,6 +97,12 @@ class PortfolioController extends Controller
     }
 
     public function PortfolioDelete($id){
+        $old_project_img = Portfolio::findOrFail($id);
+    	$img = $old_project_img->project_img;
+    	unlink($img);
+        $old_model_img = Portfolio::findOrFail($id);
+    	$model_img = $old_model_img->model_img;
+    	unlink($model_img);
        Portfolio::FindOrFail($id)->delete();
 
          $notification = array(
