@@ -23,7 +23,20 @@
 			<span>Dashboard</span>
           </a>
         </li>  
-		
+		 <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Background Image </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('all.background')}}"><i class="ti-more"></i>View</a></li>
+            <li><a href="{{route('add.background')}}"><i class="ti-more"></i>Add</a></li>
+           
+          </ul>
+        </li> 
 
          <li class="treeview">
           <a href="#">

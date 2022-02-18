@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\PortfolioController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\TargetController;
 use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Backend\BackgroundController;
 use App\Models\Admin;
 use App\Models\About;
 use App\Models\Target;
@@ -20,6 +21,7 @@ use App\Models\Contact;
 use App\Models\Service;
 use App\Models\Education;
 use App\Models\Portfolio;
+use App\Models\Background;
 
 /*
 |--------------------------------------------------------------------------
@@ -156,6 +158,16 @@ Route::post('/store',[ContactController ::class,'MessageStore'])->name('message.
 Route::get('/edit/{id}',[ContactController ::class,'MessageEdit'])->name('message.edit');
 Route::post('/update/{id}',[ContactController ::class,'MessageUpdate'])->name('message.update');
 Route::get('/delete/{id}',[ContactController ::class,'MessageDelete'])->name('message.delete');
+
+ });
+ 
+ Route::prefix('background')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[BackgroundController ::class,'BackgroundView'])->name('all.background');
+Route::get('/add',[BackgroundController ::class,'BackgroundAdd'])->name('add.background');
+Route::post('/store',[BackgroundController ::class,'BackgroundStore'])->name('background.store');
+Route::get('/edit/{id}',[BackgroundController ::class,'BackgroundEdit'])->name('background.edit');
+Route::post('/update/{id}',[BackgroundController ::class,'BackgroundUpdate'])->name('background.update');
+Route::get('/delete/{id}',[BackgroundController ::class,'BackgroundDelete'])->name('background.delete');
 
  });
 

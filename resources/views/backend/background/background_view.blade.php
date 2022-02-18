@@ -18,7 +18,7 @@
 				  <h3 class="box-title">Background Image</h3>
                   <br>
                   <br>
-                   <a href="{{route('add.bg')}}" class="btn btn-success" title="Add Edu"><i class="fa fa-plus"></i></a>
+                   <a href="{{route('add.background')}}" class="btn btn-success" title="Add Background"><i class="fa fa-plus"></i></a>
 				</div>
                 <div>
                    
@@ -39,14 +39,14 @@
 						<tbody>
                            
                                 
- @foreach ($edus as $edu)                         
+ @foreach ($backgrounds as $background)                         
 <tr>
+	<td><img src="{{asset($background->background_img)}}" alt="" style="width: 70px; height:70px"></td>	
 	
-	<td>{{$edu->background_img}}</td>
 
 <td>
-<a href="{{route('bg.edit',$background_img->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-<a href="{{route('bg.delete',$background_img->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
+<a href="{{route('background.edit',$background->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
+<a href="{{route('background.delete',$background->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
 </td>
       @endforeach      
         </tr>
