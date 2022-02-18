@@ -12,6 +12,8 @@ class Portfolio extends Model
         'project_name',
         'project_tech',
         'project_img', 
+        'model_img',
         'project_link', 
+        
     ];
 }

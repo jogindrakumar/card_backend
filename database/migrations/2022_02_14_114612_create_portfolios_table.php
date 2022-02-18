@@ -17,7 +17,8 @@ class CreatePortfoliosTable extends Migration
             $table->id();
             $table->string('project_name');
             $table->string('project_tech');
-            $table->string('project_tech');
+            $table->string('project_img');
+            $table->string('model_img');
             $table->string('project_link')->nullable();
             $table->timestamps();
         });

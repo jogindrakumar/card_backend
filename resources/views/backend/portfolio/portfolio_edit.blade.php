@@ -44,6 +44,16 @@
 		@enderror
 	</div>
     </div>
+	<input type="hidden" name="old_model_image" value="{{$portfolios->model_img}}">
+	<div class="form-group">
+        <h5>Model img<span class="text-danger">*</span></h5>
+        <div class="controls">
+        <input type="file" name="model_img"  class="form-control"  value="{{$portfolios->model_img}}"  > 
+	@error('model_img')
+		<span class="text-danger">{{$message}}</span>
+		@enderror
+	</div>
+    </div>
      <div class="form-group">
         <h5>Project Link<span class="text-danger">*</span></h5>
         <div class="controls">
