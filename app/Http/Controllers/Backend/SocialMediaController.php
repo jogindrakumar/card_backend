@@ -23,7 +23,7 @@ class SocialMediaController extends Controller
             
         'icon'              => 'required',
         'name'              => 'required',
-        'link'              => 'required',
+        
         
         ]);
         SocialMedia::insert([
