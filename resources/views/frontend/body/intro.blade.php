@@ -27,12 +27,12 @@
    		</div>   		 		
    	</div> <!-- /intro-content --> 
 
-   	<ul class="intro-social">        
-         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+   	<ul class="intro-social">      
+		   @foreach ($socialmedias as $socialmedia)
+			   
+		   
+         <li><a href="#"><i class="{{$socialmedia->icon}}"></i></a></li>
+         @endforeach  
       </ul> <!-- /intro-social -->      	
 
    </section> <!-- /intro -->

@@ -166,8 +166,6 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{route('all.message')}}"><i class="ti-more"></i>View</a></li>
-            {{-- <li><a href="{{route('add.target')}}"><i class="ti-more"></i>Add</a></li> --}}
-           
           </ul>
         </li> 
       
