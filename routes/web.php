@@ -42,7 +42,8 @@ Route::get('/', function () {
     $educations = Education::latest()->get();
     $services = Service::latest()->get();
     $targets = Target::latest()->get();
-    return view('home',compact('abouts','skills','portfolios','works','educations','services','targets'));
+    $backgrounds = Background::where('id',5)->latest()->limit(1)->get();
+    return view('home',compact('abouts','skills','portfolios','works','educations','services','targets','backgrounds'));
 });
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {

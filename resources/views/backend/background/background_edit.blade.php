@@ -12,7 +12,7 @@
 				</div>
         <div class="box-body">
             <div class="table-responsive">
-	<form action="{{route('background.store')}}" method="POST" enctype="multipart/form-data">
+	<form action="{{route('background.update',$backgrounds->id)}}" method="POST" enctype="multipart/form-data">
         @csrf
       
     <input type="hidden" name="old_image" value="{{$backgrounds->background_img}}">
@@ -27,7 +27,7 @@
     </div>
            
     <div class="text-xs-right">
-        <input type="submit" class="btn btn-rounded btn-primary mb-5" value="Add New">
+        <input type="submit" class="btn btn-rounded btn-primary mb-5" value="Update">
        
     </div>
 </form>

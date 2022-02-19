@@ -33,6 +33,30 @@
 	================================================== -->
 	<link rel="icon" type="image/png" href="{{asset('frontend/favicon.png')}}">
 
+@foreach ($backgrounds as $background)
+   
+
+   <style>
+
+   
+#intro {
+    background: #151515 url({{asset($background->background_img)}}
+     
+    ) no-repeat center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 720px;
+    display: table;
+    position: relative;
+    text-align: center;
+}
+
+   </style>
+@endforeach
 </head>
 
 <body id="top">
