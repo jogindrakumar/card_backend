@@ -1620,7 +1620,7 @@ header .logo a {
 
 
 /* #intro {
-    background: #151515 url({{asset($background->background_img)}}) no-repeat center bottom;
+    background: #151515 url("{{asset($backgrounds->background_img)}}") no-repeat center bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

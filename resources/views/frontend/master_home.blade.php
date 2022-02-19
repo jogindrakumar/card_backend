@@ -32,17 +32,12 @@
    <!-- favicons
 	================================================== -->
 	<link rel="icon" type="image/png" href="{{asset('frontend/favicon.png')}}">
-
-@foreach ($backgrounds as $background)
    
-
-   <style>
-
-   
-#intro {
-    background: #151515 url({{asset($background->background_img)}}
-     
-    ) no-repeat center bottom;
+    @foreach ($backgrounds as $background )
+<style>
+  
+   #intro {
+    background: #151515 url('{{asset($background->background_img)}}') no-repeat center bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -54,9 +49,8 @@
     position: relative;
     text-align: center;
 }
-
-   </style>
-@endforeach
+</style>
+ @endforeach
 </head>
 
 <body id="top">

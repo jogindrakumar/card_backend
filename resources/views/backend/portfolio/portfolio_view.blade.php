@@ -40,7 +40,7 @@
 						</thead>
 						<tbody>
                            
-                                
+                            
  @foreach ($portfolios as $portfolio)                         
 <tr>
 	<td><img src="{{asset($portfolio->project_img)}}" alt="" style="width: 70px; height:70px"></td>	
