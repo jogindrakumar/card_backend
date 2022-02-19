@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\SocialMedia;
 
 class SocialMediaController extends Controller
 {
@@ -20,7 +21,7 @@ class SocialMediaController extends Controller
     public function SocialMediaStore(Request $request){
         $request->validate([
             
-        'icon'               => 'required',
+        'icon'              => 'required',
         'name'              => 'required',
         'link'              => 'required',
         

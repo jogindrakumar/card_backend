@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\TargetController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\BackgroundController;
+use App\Http\Controllers\Backend\SocialMediaController;
 use App\Models\Admin;
 use App\Models\About;
 use App\Models\Target;
@@ -22,6 +23,7 @@ use App\Models\Service;
 use App\Models\Education;
 use App\Models\Portfolio;
 use App\Models\Background;
+use App\Models\SocialMedia;
 
 /*
 |--------------------------------------------------------------------------
@@ -162,6 +164,8 @@ Route::get('/delete/{id}',[ContactController ::class,'MessageDelete'])->name('me
 
  });
  
+
+ // Backgroud Routes
  Route::prefix('background')->middleware(['auth:admin'])->group(function(){
 Route::get('/view',[BackgroundController ::class,'BackgroundView'])->name('all.background');
 Route::get('/add',[BackgroundController ::class,'BackgroundAdd'])->name('add.background');
@@ -171,6 +175,17 @@ Route::post('/update/{id}',[BackgroundController ::class,'BackgroundUpdate'])->n
 Route::get('/delete/{id}',[BackgroundController ::class,'BackgroundDelete'])->name('background.delete');
 Route::get('/inactive/{id}', [BackgroundController ::class, 'BackgroundInactive'])->name('background.inactive');
 Route::get('/active/{id}', [BackgroundController ::class, 'BackgroundActive'])->name('background.active');
+
+ });
+
+ // Social Media Links
+ Route::prefix('socialmedia')->middleware(['auth:admin'])->group(function(){
+Route::get('/view',[SocialMediaController ::class,'SocialMediaView'])->name('all.socialmedia');
+Route::get('/add',[SocialMediaController ::class,'SocialMediaAdd'])->name('add.socialmedia');
+Route::post('/store',[SocialMediaController ::class,'SocialMediaStore'])->name('socialmedia.store');
+Route::get('/edit/{id}',[SocialMediaController ::class,'SocialMediaEdit'])->name('socialmedia.edit');
+Route::post('/update/{id}',[SocialMediaController ::class,'SocialMediaUpdate'])->name('socialmedia.update');
+Route::get('/delete/{id}',[SocialMediaController ::class,'SocialMediaDelete'])->name('socialmedia.delete');
 
  });
 

@@ -25,7 +25,7 @@
         </li>  
 		 <li class="treeview">
           <a href="#">
-            <i data-feather="message-circle"></i>
+            <i data-feather="image"></i>
             <span>Background Image </span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -40,7 +40,7 @@
 
          <li class="treeview">
           <a href="#">
-            <i data-feather="message-circle"></i>
+            <i data-feather="file-text"></i>
             <span>About</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -55,7 +55,7 @@
         </li> 
          <li class="treeview">
           <a href="#">
-            <i data-feather="message-circle"></i>
+            <i data-feather="aperture"></i>
             <span>Skill</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -71,7 +71,7 @@
         
         <li class="treeview">
           <a href="#">
-            <i data-feather="message-circle"></i>
+            <i data-feather="award"></i>
             <span>Work Experience</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -86,7 +86,7 @@
         </li> 
          <li class="treeview">
           <a href="#">
-            <i data-feather="message-circle"></i>
+            <i data-feather="book-open"></i>
             <span>Education</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -101,7 +101,7 @@
         </li> 
         <li class="treeview">
           <a href="#">
-            <i data-feather="message-circle"></i>
+            <i data-feather="box"></i>
             <span>Portfolio</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -115,7 +115,7 @@
         </li> 
          <li class="treeview">
           <a href="#">
-            <i data-feather="message-circle"></i>
+            <i data-feather="layers"></i>
             <span>Service</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -129,7 +129,7 @@
         </li> 
         <li class="treeview">
           <a href="#">
-            <i data-feather="message-circle"></i>
+            <i data-feather="target"></i>
             <span>Target</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -138,6 +138,20 @@
           <ul class="treeview-menu">
             <li><a href="{{route('all.target')}}"><i class="ti-more"></i>View</a></li>
             <li><a href="{{route('add.target')}}"><i class="ti-more"></i>Add</a></li>
+           
+          </ul>
+        </li> 
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="facebook"></i>
+            <span>Social Media</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('all.socialmedia')}}"><i class="ti-more"></i>View</a></li>
+            <li><a href="{{route('add.socialmedia')}}"><i class="ti-more"></i>Add</a></li>
            
           </ul>
         </li> 
