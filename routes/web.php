@@ -42,7 +42,7 @@ Route::get('/', function () {
     $educations = Education::latest()->get();
     $services = Service::latest()->get();
     $targets = Target::latest()->get();
-    $backgrounds = Background::where('id',5)->latest()->limit(1)->get();
+    $backgrounds = Background::where('status',1)->limit(1)->get();
     return view('home',compact('abouts','skills','portfolios','works','educations','services','targets','backgrounds'));
 });
 
@@ -169,6 +169,8 @@ Route::post('/store',[BackgroundController ::class,'BackgroundStore'])->name('ba
 Route::get('/edit/{id}',[BackgroundController ::class,'BackgroundEdit'])->name('background.edit');
 Route::post('/update/{id}',[BackgroundController ::class,'BackgroundUpdate'])->name('background.update');
 Route::get('/delete/{id}',[BackgroundController ::class,'BackgroundDelete'])->name('background.delete');
+Route::get('/inactive/{id}', [BackgroundController ::class, 'BackgroundInactive'])->name('background.inactive');
+Route::get('/active/{id}', [BackgroundController ::class, 'BackgroundActive'])->name('background.active');
 
  });
 

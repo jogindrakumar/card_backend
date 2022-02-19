@@ -31,9 +31,8 @@
 							<tr>
 								
 								<th>background Image</th>
-								
+								<th>Status</th>
 								<th>Action</th>
-								
 							</tr>
 						</thead>
 						<tbody>
@@ -45,10 +44,30 @@
 	
 
 <td>
-<a href="{{route('background.edit',$background->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-<a href="{{route('background.delete',$background->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
-</td>
-      @endforeach      
+		 	@if($background->status == 1)
+		 	<span class="badge badge-pill badge-success"> Active </span>
+		 	@else
+           <span class="badge badge-pill badge-danger"> InActive </span>
+		 	@endif
+
+		 </td>
+
+		<td width="30%">
+  <a href="{{ route('background.edit',$background->id) }}" class="btn btn-info btn-sm" title="Edit Data"><i class="fa fa-pencil"></i> </a>
+
+ <a href="{{ route('background.delete',$background->id) }}" class="btn btn-danger btn-sm" title="Delete Data" id="delete">
+ 	<i class="fa fa-trash"></i></a>
+
+@if($background->status == 1)
+ <a href="{{ route('background.inactive',$background->id) }}" class="btn btn-danger btn-sm" title="Inactive Now"><i class="fa fa-arrow-down"></i> </a>
+	 @else
+ <a href="{{ route('background.active',$background->id) }}" class="btn btn-success btn-sm" title="Active Now"><i class="fa fa-arrow-up"></i> </a>
+	 @endif
+
+		</td>
+
+	 </tr>
+	  @endforeach    
         </tr>
          
 							

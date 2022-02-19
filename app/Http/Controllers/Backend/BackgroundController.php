@@ -67,6 +67,9 @@ class BackgroundController extends Controller
     }
 
     public function BackgroundDelete($id){
+        $old_img = Background::findOrFail($id);
+    	$img = $old_img->background_img;
+    	unlink($img);
        Background::FindOrFail($id)->delete();
 
          $notification = array(
@@ -75,4 +78,28 @@ class BackgroundController extends Controller
                             );
                     return redirect()->back()->with($notification);
     }
+
+
+
+       public function BackgroundInactive($id){
+     	Background::findOrFail($id)->update(['status' => 0]);
+     	$notification = array(
+			'message' => 'Background Inactive',
+			'alert-type' => 'success'
+		);
+
+		return redirect()->back()->with($notification);
+     }
+
+
+  public function BackgroundActive($id){
+  	Background::findOrFail($id)->update(['status' => 1]);
+     	$notification = array(
+			'message' => 'Background Active',
+			'alert-type' => 'success'
+		);
+
+		return redirect()->back()->with($notification);
+
+     }
 }

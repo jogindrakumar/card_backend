@@ -10,6 +10,7 @@ class Background extends Model
     use HasFactory;
     protected $fillable = [
         'background_img',
+        'status',
        
         
         
