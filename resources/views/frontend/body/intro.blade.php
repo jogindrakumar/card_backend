@@ -31,7 +31,7 @@
 		   @foreach ($socialmedias as $socialmedia)
 			   
 		   
-         <li><a href="#"><i class="{{$socialmedia->icon}}"></i></a></li>
+         <li><a href="{{$socialmedia->link}}" target="_blank"><i class="{{$socialmedia->icon}}"></i></a></li>
          @endforeach  
       </ul> <!-- /intro-social -->      	
 

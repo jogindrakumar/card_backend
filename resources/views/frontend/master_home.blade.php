@@ -95,11 +95,9 @@
      		<div class="col-six tab-full pull-right social">
 
      			<ul class="footer-social">        
-			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-			      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-			      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			     @foreach ($socialmedias as $socialmedia)    
+         <li><a href="{{$socialmedia->link}}" target="_blank"><i class="{{$socialmedia->icon}}"></i></a></li>
+         @endforeach  
 			   </ul> 
 	      		
 	      </div>
