@@ -6,7 +6,7 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Kards</title>
+	<title>JK</title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
 
@@ -64,7 +64,7 @@
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
 	   		<div class="logo">
-		         <a href="index.html">KARDS</a>
+		         <a href="/">JK</a>
 		      </div>		      
 
 		   	<nav id="main-nav-wrap">
