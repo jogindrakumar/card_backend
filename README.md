@@ -65,8 +65,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-
-##
+## Backend of this https://www.styleshout.com/demo/?theme=kards
+## Step follow Below :
 After clone this repo 
 1. RUN composer command ->  composer update 
 2 . change .dot env example file to . dot env  and Add Database Name
