@@ -73,5 +73,5 @@ After clone this repo
 3. create new DB in MySQL 
 4. Run command --> php artisan key: generate
 5. Run command -> php artisan migrate --seed 
-seed add admin in your database Email-> admin@gmail.com , pass-> password
-6. Now you can login admin dashboard ->http://127.0.0.1:8000/admin/login
+6. this seed add admin in your database Email-> admin@gmail.com , pass-> password
+7. Now you can login admin dashboard ->http://127.0.0.1:8000/admin/login
