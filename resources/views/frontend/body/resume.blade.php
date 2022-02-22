@@ -6,7 +6,11 @@
    			<h5>Resume</h5>
    			<h1>More of my credentials.</h1>
 
+<<<<<<< HEAD
    			<p class="lead"></p>
+=======
+   			{{-- <p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p> --}}
+>>>>>>> 05b88ca611dca2d3397893524a8821991b4d4820
 
    		</div>   		
    	</div> <!-- /section-intro--> 

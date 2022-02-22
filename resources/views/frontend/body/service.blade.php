@@ -8,7 +8,11 @@
    			<h5>Services</h5>
    			<h1>What Can I Do For You?</h1>
 
+<<<<<<< HEAD
    			<p class="lead">You can find better product from Anywhere in the world but Not Everyone gives You a Good Service</p>
+=======
+   			{{-- <p class="lead"></p> --}}
+>>>>>>> 05b88ca611dca2d3397893524a8821991b4d4820
 
    		</div>   		
    	</div> <!-- /section-intro -->
