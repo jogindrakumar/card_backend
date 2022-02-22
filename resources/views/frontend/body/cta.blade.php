@@ -1,4 +1,4 @@
-<section id="cta" class="grey-section">
+{{-- <section id="cta" class="grey-section">
 
    	<div class="row cta-content">
 
@@ -20,4 +20,4 @@
 
    	</div> <!-- /cta-content -->
 
-   </section>
+   </section> --}}

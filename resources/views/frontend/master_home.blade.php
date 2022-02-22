@@ -6,7 +6,7 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>JK</title>
+	<title>Jogindra kumar</title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
 
@@ -63,8 +63,8 @@
    		<div class="top-bar">
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
-	   		<div class="logo">
-		         <a href="/">JK</a>
+	   		<div class="">
+		         <a href="/"></a>
 		      </div>		      
 
 		   	<nav id="main-nav-wrap">
@@ -104,8 +104,8 @@
 
       	<div class="col-six tab-full">
 	      	<div class="copyright">
-		        	<span>© Copyright Kards 2016.</span> 
-		        	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
+		        	<span>© Copyright 2022.</span> 
+		        	<span> <a href="http://www.jogindrakumar.com/">Jogindra Kumar</a></span>	         	
 		         </div>		                  
 	      	</div>
 

@@ -64,3 +64,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Backend of this https://www.styleshout.com/demo/?theme=kards
+## Step follow Below :
+After clone this repo 
+1. RUN composer command ->  composer update 
+2 . change .dot env example file to . dot env  and Add Database Name
+3. create new DB in MySQL 
+4. Run command --> php artisan key: generate
+5. Run command -> php artisan migrate --seed 
+6. this seed add admin in your database Email-> admin@gmail.com , pass-> password
+7. Now you can login admin dashboard ->http://127.0.0.1:8000/admin/login
