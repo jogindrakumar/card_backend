@@ -40,7 +40,7 @@
    				</li>
    				<li>
    					<strong>Website:</strong>
-   					<span>www.kardswebsite.com</span>
+   					<span>www.jogindrakumar.com</span>
    				</li>
    				<li>
    					<strong>Email:</strong>

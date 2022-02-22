@@ -17,7 +17,7 @@
    			<h5>Contact</h5>
    			<h1>I'd Love To Hear From You.</h1>
 
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+   			<p class="lead">No Matter How big or small project you have .. we'll discuss . Feel Free to send Message :) </p>
 
    		</div> 
    	</div> <!-- /section-intro -->

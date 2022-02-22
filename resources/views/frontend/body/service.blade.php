@@ -8,7 +8,7 @@
    			<h5>Services</h5>
    			<h1>What Can I Do For You?</h1>
 
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+   			<p class="lead">You can find better product from Anywhere in the world but Not Everyone gives You a Good Service</p>
 
    		</div>   		
    	</div> <!-- /section-intro -->
