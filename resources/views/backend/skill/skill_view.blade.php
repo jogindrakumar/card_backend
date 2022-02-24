@@ -16,6 +16,9 @@
 			 <div class="box">
 				<div class="box-header with-border">
 				  <h3 class="box-title">Skill</h3>
+				  <br>
+                  <br>
+                   <a href="{{route('add.skill')}}" class="btn btn-success btn-sm" title="Add Skill"><i class="fa fa-plus"></i></a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -39,8 +42,8 @@
 	<td>{{$skill->skill_name}}</td>
 	<td>{{$skill->skill_per}}</td>	
 <td>
-<a href="{{route('skill.edit',$skill->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-<a href="{{route('skill.delete',$skill->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
+<a href="{{route('skill.edit',$skill->id)}}" class="btn btn-warning btn-sm" title="Edit Data"><i class="fa fa-edit"></i></a>
+<a href="{{route('skill.delete',$skill->id)}}" class="btn btn-danger btn-sm" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
 </td>
       @endforeach      
         </tr>

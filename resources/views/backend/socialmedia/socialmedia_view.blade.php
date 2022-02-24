@@ -18,7 +18,7 @@
 				  <h3 class="box-title">Social Media</h3>
                   <br>
                   <br>
-                   <a href="{{route('add.socialmedia')}}" class="btn btn-success" title="Add Social Media"><i class="fa fa-plus"></i></a>
+                   <a href="{{route('add.socialmedia')}}" class="btn btn-success btn-sm" title="Add Social Media"><i class="fa fa-plus"></i></a>
 				</div>
                 <div>
                    
@@ -47,8 +47,8 @@
 	<td>{{$socialmedia->name}}</td>	
 	<td>{{$socialmedia->link}}</td>	
 <td>
-<a href="{{route('socialmedia.edit',$socialmedia->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-<a href="{{route('socialmedia.delete',$socialmedia->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
+<a href="{{route('socialmedia.edit',$socialmedia->id)}}" class="btn btn-warning btn-sm" title="Edit Data"><i class="fa fa-edit"></i></a>
+<a href="{{route('socialmedia.delete',$socialmedia->id)}}" class="btn btn-danger btn-sm" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
 </td>
       @endforeach      
         </tr>

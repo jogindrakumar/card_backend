@@ -18,7 +18,7 @@
 				  <h3 class="box-title">Work</h3>
                   <br>
                   <br>
-                   <a href="{{route('add.work')}}" class="btn btn-success" title="Add Work"><i class="fa fa-plus"></i></a>
+                   <a href="{{route('add.work')}}" class="btn btn-success btn-sm" title="Add Work"><i class="fa fa-plus"></i></a>
 				</div>
                 <div>
                    
@@ -47,8 +47,8 @@
 	<td>{{$work->company_name}}</td>	
 	<td>{{$work->desp}}</td>	
 <td>
-<a href="{{route('work.edit',$work->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-<a href="{{route('work.delete',$work->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
+<a href="{{route('work.edit',$work->id)}}" class="btn btn-warning btn-sm" title="Edit Data"><i class="fa fa-edit"></i></a>
+<a href="{{route('work.delete',$work->id)}}" class="btn btn-danger btn-sm" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
 </td>
       @endforeach      
         </tr>

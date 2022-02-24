@@ -18,7 +18,7 @@
 				  <h3 class="box-title">Background Image</h3>
                   <br>
                   <br>
-                   <a href="{{route('add.background')}}" class="btn btn-success" title="Add Background"><i class="fa fa-plus"></i></a>
+                   <a href="{{route('add.background')}}" class="btn btn-success btn-sm" title="Add Background"><i class="fa fa-plus"></i></a>
 				</div>
                 <div>
                    

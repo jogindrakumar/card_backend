@@ -18,7 +18,7 @@
 				  <h3 class="box-title">Service</h3>
                   <br>
                   <br>
-                   <a href="{{route('add.service')}}" class="btn btn-success" title="Add Edu"><i class="fa fa-plus"></i></a>
+                   <a href="{{route('add.service')}}" class="btn btn-success btn-sm" title="Add Service"><i class="fa fa-plus"></i></a>
 				</div>
                 <div>
                    
@@ -47,8 +47,8 @@
 	<td>{{$service->service_desp}}</td>	
 	<td>{{$service->service_icon}}</td>	
 <td>
-<a href="{{route('service.edit',$service->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-<a href="{{route('service.delete',$service->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
+<a href="{{route('service.edit',$service->id)}}" class="btn btn-warning btn-sm" title="Edit Data"><i class="fa fa-edit"></i></a>
+<a href="{{route('service.delete',$service->id)}}" class="btn btn-danger btn-sm" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
 </td>
       @endforeach      
         </tr>

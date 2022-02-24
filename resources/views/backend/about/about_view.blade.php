@@ -16,6 +16,9 @@
 			 <div class="box">
 				<div class="box-header with-border">
 				  <h3 class="box-title">About</h3>
+				  <br>
+				  <br>
+				     <a href="{{route('add.about')}}" class="btn btn-success btn-sm" title="Add About"><i class="fa fa-plus"></i></a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -52,8 +55,8 @@
 	
 	
 <td>
-<a href="{{route('about.edit',$about->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-<a href="{{route('about.delete',$about->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
+<a href="{{route('about.edit',$about->id)}}" class="btn btn-warning btn-sm" title="Edit Data"><i class="fa fa-edit"></i></a>
+<a href="{{route('about.delete',$about->id)}}" class="btn btn-danger btn-sm" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
 </td>
       @endforeach      
         </tr>

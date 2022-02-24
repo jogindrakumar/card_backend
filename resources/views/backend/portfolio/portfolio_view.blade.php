@@ -18,7 +18,7 @@
 				  <h3 class="box-title">Portfolio</h3>
                   <br>
                   <br>
-                   <a href="{{route('add.portfolio')}}" class="btn btn-success" title="Add Edu"><i class="fa fa-plus"></i></a>
+                   <a href="{{route('add.portfolio')}}" class="btn btn-success btn-sm" title="Add Portfolio"><i class="fa fa-plus"></i></a>
 				</div>
                 <div>
                    
@@ -50,8 +50,8 @@
 	<td>{{$portfolio->project_link}}</td>	
 	
 <td>
-<a href="{{route('portfolio.edit',$portfolio->id)}}" class="btn btn-warning" title="Edit Data"><i class="fa fa-edit"></i></a>
-<a href="{{route('portfolio.delete',$portfolio->id)}}" class="btn btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
+<a href="{{route('portfolio.edit',$portfolio->id)}}" class="btn btn-warning btn-sm" title="Edit Data"><i class="fa fa-edit"></i></a>
+<a href="{{route('portfolio.delete',$portfolio->id)}}" class="btn btn-danger btn-sm" id="delete" title="Delete Data"><i class="fa fa-trash"></i></a>
 </td>
       @endforeach      
         </tr>
