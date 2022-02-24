@@ -66,8 +66,10 @@ class PortfolioController extends Controller
          $old_image = $request->old_image;
          $old_model_image = $request->old_model_image;
 
-                unlink($old_image);
-                
+
+         if($request->file('project_img') && $request->file('model_img') ){
+
+            unlink($old_image); 
                 $image = $request->file('project_img');
                 $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
                 Image::make($image)->resize(800,801)->save('upload/portfolio/'.$name_gen);
@@ -81,10 +83,22 @@ class PortfolioController extends Controller
 
         Portfolio::FindOrFail($id)->update([
 
+        'project_img'              =>   $save_url,
+        'model_img'              =>  $save_model_url, 
+       
+        ]);
+         $notification = array(
+            'message' => 'portfolio Updated Successfully',
+            'alert-type' => 'success'
+                );
+        return redirect()->route('all.portfolio')->with($notification);
+         }else{
+
+            
+        Portfolio::FindOrFail($id)->update([
+
         'project_name'              => $request->project_name,
         'project_tech'              => $request->project_tech,
-        'project_img'              =>   $save_url,
-        'model_img'              =>  $save_model_url,
         'project_link'              => $request->project_link,   
        
         ]);
@@ -93,6 +107,10 @@ class PortfolioController extends Controller
             'alert-type' => 'success'
                 );
         return redirect()->route('all.portfolio')->with($notification);
+
+         }
+
+
 
     }
 

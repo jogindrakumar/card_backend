@@ -159,12 +159,14 @@ Route::get('/delete/{id}',[TargetController ::class,'TargetDelete'])->name('targ
 Route::prefix('message')->middleware(['auth:admin'])->group(function(){
 Route::get('/view',[ContactController ::class,'MessageView'])->name('all.message');
 // Route::get('/add',[ContactController ::class,'MessageAdd'])->name('add.message');
-Route::post('/store',[ContactController ::class,'MessageStore'])->name('message.store');
+// Route::post('/store',[ContactController ::class,'MessageStore'])->name('message.store');
 Route::get('/edit/{id}',[ContactController ::class,'MessageEdit'])->name('message.edit');
 Route::post('/update/{id}',[ContactController ::class,'MessageUpdate'])->name('message.update');
 Route::get('/delete/{id}',[ContactController ::class,'MessageDelete'])->name('message.delete');
 
  });
+
+ Route::post('message/sent',[ContactController ::class,'MessageStore'])->name('message.store');
  
 
  // Backgroud Routes

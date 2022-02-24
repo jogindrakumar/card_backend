@@ -58,7 +58,7 @@
 					   </div>
 
 			         <div class="link-box">
-			            <a href="{{$portfolio->project_link}}">Details</a>
+			            <a href="{{$portfolio->project_link}}" target="_blank">Details</a>
 					      <a href="#" class="popup-modal-dismiss">Close</a>
 			         </div>		      
 
