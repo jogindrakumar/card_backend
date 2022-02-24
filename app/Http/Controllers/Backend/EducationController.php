@@ -24,7 +24,7 @@ class EducationController extends Controller
             
         'degree_name'       => 'required',
         'from'              => 'required',
-        'desp'              => 'required',
+    
         
         ]);
         Education::insert([

@@ -24,7 +24,7 @@ class WorkController extends Controller
             
         'post_name'       => 'required',
         'company_name'    => 'required',
-        'desp'            => 'required',
+      
         
         ]);
         Work::insert([

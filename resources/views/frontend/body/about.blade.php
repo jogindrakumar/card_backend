@@ -55,21 +55,22 @@
 
    			<h3>Skills</h3>
    			<p></p>
-
-				<ul class="skill-bars">
-					@foreach ($skills as $skill )
-						
-					
+	@foreach ($skills as $skill )
+				<ul class="skill-bars">	
 				   <li>
-				   	<div class="progress percent90"><span>{{$skill->skill_per}}%</span></div>
+					
+				   	<div class="progress percent{{$skill->skill_per}}"></div>
 				   	<strong>{{$skill->skill_name}}</strong>
 				   </li>
-				@endforeach
+			
 				   
       
 				</ul> <!-- /skill-bars -->		
-
+	@endforeach
    		</div>
+		   <div class="progress" style="height: 20px;">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
 
    	</div>
 

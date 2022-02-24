@@ -17,7 +17,7 @@ class CreateWorksTable extends Migration
             $table->id();
             $table->string('post_name');
             $table->string('company_name');
-            $table->text('desp');
+            $table->text('desp')->nullable();
             $table->timestamps();
         });
     }

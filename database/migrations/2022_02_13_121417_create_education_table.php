@@ -17,7 +17,7 @@ class CreateEducationTable extends Migration
             $table->id();
             $table->string('degree_name');
             $table->string('from');
-            $table->text('desp');
+            $table->text('desp')->nullable();
             $table->timestamps();
         });
     }
