@@ -63,14 +63,11 @@
    		<div class="top-bar">
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
-<<<<<<< HEAD
+
 	   		<div class="logo">
                    <h5 class="text-center" style="color: whitesmoke">MENU</h5>
 		         <a href="/">JK</a>
-=======
-	   		<div class="">
-		         <a href="/"></a>
->>>>>>> 05b88ca611dca2d3397893524a8821991b4d4820
+
 		      </div>		      
 
 		   	<nav id="main-nav-wrap">
@@ -110,13 +107,10 @@
 
       	<div class="col-six tab-full">
 	      	<div class="copyright">
-<<<<<<< HEAD
+
 		        	<span>© Copyright 2022 </span> 
 		        	<span><a href="http://www.jogindrakumar/">JOGINDRA KUMAR</a></span>	         	
-=======
-		        	<span>© Copyright 2022.</span> 
-		        	<span> <a href="http://www.jogindrakumar.com/">Jogindra Kumar</a></span>	         	
->>>>>>> 05b88ca611dca2d3397893524a8821991b4d4820
+
 		         </div>		                  
 	      	</div>
 
